@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+        backgroundColor="0xffffff">
+
+
+    <mx:Canvas backgroundColor="0xff0000" id="leftSideMenu" height="100%" width="200" x="-160" click="slideCanvas()">
+
+    </mx:Canvas>
+
+    <fx:Declarations>
+          <mx:Move id="panelMover" />
+    </fx:Declarations>
+
+    <fx:Script><![CDATA[
+        private function slideCanvas():void {
+            			//set target of move transition
+				panelMover.target = leftSideMenu;
+				//determine direction of panel based on position
+				if (leftSideMenu.x == -160) {
+					panelMover.xFrom = -160;
+					panelMover.xTo = 0;
+				} else {
+					panelMover.xFrom = 0;
+					panelMover.xTo = -160;
+				}
+				//play transition
+				panelMover.play();	
+
+        }
+        ]]></fx:Script>
+
+    
+</s:Application>
