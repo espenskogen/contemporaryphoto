@@ -32,6 +32,7 @@ const router = new Router(on => {
   on('/gallery', async() => <Gallery />);
 
   on('/register', async () => <RegisterPage />);
+  on('/', async() => <Gallery />);
 
   on('*', async (state) => {
     const query = `/graphql?query={content(path:"${state.path}"){path,title,content,component}}`;

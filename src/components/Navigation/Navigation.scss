@@ -21,11 +21,11 @@
 .link,
 .link:active,
 .link:visited {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(55, 55, 55, .6);
 }
 
 .link:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(55, 55, 55, 1);
 }
 
 .highlight {
@@ -33,7 +33,7 @@
   margin-left: 8px;
   border-radius: 3px;
   background: rgba(0, 0, 0, .15);
-  color: #fff;
+  color: #000;
 }
 
 .highlight:hover {
@@ -42,4 +42,14 @@
 
 .spacer {
   color: rgba(255, 255, 255, .3);
+}
+
+
+@media(max-height: 670px){
+  .link {
+    display: inline-block;
+    padding: 3px 8px;
+    text-decoration: none;
+    font-size: .25em; /* ~18px */
+  }
 }
