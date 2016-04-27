@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: contemporaryPhoto
+spec:
+  containers:
+    - name: contemporaryphoto
+      image: eu.gcr.io/contemporary-photo/contemporaryphoto:v1.0
+      command: []
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 3000
+          hostPort: 80
